@@ -19,25 +19,15 @@ extension Array where Element == Array<Int>{
         print(d)
         //Nested Function Hidden from the outside world unless I return it
         
-        //Check
+        //Check if two Intergeres
         func isSymmetric(for x: Int, comparedTo y: Int) -> Bool{
-            if x == y{
-                symmetrical = true
-            }else{
-                symmetrical = false
-            }
-            return symmetrical
+            return x == y
         }
         
         //No need to transform the matrix we're just dealing with a 2x2 matrix
         func isTransposeEqualToZero(for x:Int, and y: Int) -> Bool{
             let sum = x + y
-            if sum == 0 {
-                transposeIsEqualToZero = true
-            }else{
-                transposeIsEqualToZero = false
-            }
-            return transposeIsEqualToZero
+            return sum == 0 ? true : false
         }
         
         //Check if b and c are symmetrical
@@ -48,13 +38,8 @@ extension Array where Element == Array<Int>{
         
         let result: Bool = (transposeIsEqualToZero && symmetrical)
         //Return true if the matrix meets the requirements of the Hamiltonian matrix
-        var output = result ? true : false
-        
-//        if transposeIsEqualToZero && symmetrical{
-//            return true
-//        }else{
-//            return false
-//        }
+        let output = result ? true : false
+
         return output
     }
     
